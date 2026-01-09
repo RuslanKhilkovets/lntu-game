@@ -1,18 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Mini Game</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Mini Game</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/pixel-font.css" />
+  </head>
+  <body>
+    <div class="game-container">
+      <h1 class="game-title">LNTU PIXEL DODGE</h1>
+      <canvas id="game"></canvas>
+    </div>
+    <button
+      id="restartBtn"
+      style="
+        display: none;
+        position: absolute;
+        left: 50%;
+        top: 60%;
+        transform: translate(-50%, -50%);
+        padding: 12px 32px;
+        font-size: 18px;
+        background: #fff;
+        color: #222;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+      "
+    >
+      Restart Game
+    </button>
 
-  <canvas id="game"></canvas>
-  <script src="js/input.js"></script>
-  <script src="js/player.js"></script>
-  <script src="js/enemy.js"></script>
-  <script src="js/utils.js"></script>
-  <script src="js/game.js"></script>
+    <button
+      id="tutorialBtn"
+      style="
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        z-index: 20;
+        padding: 8px 20px;
+        font-size: 16px;
+        background: #fff;
+        color: #222;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+      "
+    >
+      Як грати?
+    </button>
 
-</body>
+    <div id="tutorialBackdrop" class="modal-backdrop"></div>
+    <div id="tutorialModal" class="modal">
+      <div class="modal-content">
+        <span id="tutorialClose" class="modal-close">&times;</span>
+        <h2>Як грати</h2>
+        <ul>
+          <li>Керуй гравцем стрілками вліво/вправо</li>
+          <li>Уникай ворогів, що падають згори</li>
+          <li>Кожен пропущений ворог — +1 бал</li>
+          <li>Втрачаєш життя при зіткненні з ворогом</li>
+          <li>Гра закінчується, коли життя = 0</li>
+        </ul>
+        <p>Удачі!</p>
+      </div>
+    </div>
+    <script src="js/input.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/enemy.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/tutorial.js"></script>
+  </body>
 </html>

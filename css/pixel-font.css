@@ -1,0 +1,7 @@
+/* Press Start 2P font for pixel art style */
+@font-face {
+  font-family: 'PressStart2P';
+  src: url('https://fonts.gstatic.com/s/pressstart2p/v12/e3t4euO8KNyE0rkbKOgA1A.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
